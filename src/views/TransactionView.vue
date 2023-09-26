@@ -59,7 +59,7 @@ export default {
           'expiry_date': this.expiry_date
         })
         console.log('data', response.data)
-        // return toastr.success(response.data.message)
+        return toastr.success(response.data.message)
       } catch (error) {
         toastr.error(error)
       }
