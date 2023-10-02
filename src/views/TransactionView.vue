@@ -50,10 +50,10 @@ export default {
 
     async validateCardDetails() {
       try {
-        // const BASEURL = process.env.baseUrl;
 
-        const response = await axios.post('http://127.0.0.1:8000/validate-credit-card', {
-        // const response = await axios.post(`${BASEURL}/card/validate-credit-card`, {
+        const baseurl = import.meta.env.VITE_APP_BASEURL
+       
+        const response = await axios.post(`${baseurl}card/validate-credit-card`, {
           'pan': this.pan,
           'cvv': this.cvv,
           'expiry_date': this.expiry_date
